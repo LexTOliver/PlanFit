@@ -11,6 +11,17 @@ O backend segue um padrão de arquitetura MVC (*Model-View-Controller*), organiz
 
 O frontend ainda está em fase de prototipação.
 
+## Instalação
+
+Para executar a aplicação localmente, faça o clone do repositório e execute os comandos no console:
+
+```bash
+npm install
+npm start
+```
+
+**Obs.:** É importante verificar se o npm está instalado na sua máquina!
+
 ## Info
 
 ### Ferramentas e Tecnologias
