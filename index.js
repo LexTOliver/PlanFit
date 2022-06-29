@@ -8,7 +8,7 @@ var exercicioRoute = require('./routes/exercicioRoutes.js');
 
 // Conectando ao mongoDB
 // O próprio Mongo fornece a url abaixo; TODO: configurar DB para  o projeto
-mongoose.connect("mongodb+srv://LexOliver:DWM_Opta22@clustercleiton.h779g.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
+mongoose.connect("mongodb://username:password@host:port/database?options...", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });

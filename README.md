@@ -13,7 +13,7 @@ O frontend ainda está em fase de prototipação.
 
 ## Instalação
 
-Para executar a aplicação localmente, faça o clone do repositório e execute os comandos no console:
+Para executar a aplicação localmente, faça o clone do repositório, altere a URL de conexão ao mongoDB e execute os comandos no console:
 
 ```bash
 npm install
