@@ -7,7 +7,7 @@ O projeto está sendo desenvolvido em uma arquiterura cliente-servidor. O lado s
 
 O backend segue um padrão de arquitetura MVC (*Model-View-Controller*), organizando o código em três camadas distintas. Segue a modelagem:
 
-<img src="proj/backend.png"/>
+<img src="proj/backend.png" alt="Design do projeto backend"/>
 
 O frontend ainda está em fase de prototipação.
 
@@ -17,8 +17,8 @@ O frontend ainda está em fase de prototipação.
 
  - Backend
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg" width="40" height="40" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg" width="40" height="40" />
 
 
  - Frontend
