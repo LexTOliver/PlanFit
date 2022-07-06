@@ -4,6 +4,7 @@ const exercicioController = require('../controllers/exercicioController');
 var router = express.Router();
 
 router.get('/', exercicioController.show); // Lista exercícios
+router.post('/busca/', exercicioController.indexBody); // Lista exercício, filtrando pelo body da requisição
 router.get('/buscaid/:id', exercicioController.index); // Lista exercício, filtrando por id
 router.get('/buscanome/:nome', exercicioController.indexNome); // Lista exercício, filtrando por nome
 router.get('/buscaequipamento/:equipamento', exercicioController.indexEquipamento); // Lista exercício, filtrando por equipamento

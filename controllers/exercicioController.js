@@ -9,6 +9,12 @@ module.exports = {
     return res.json(exercicios);
   },
  
+  // lista elementos através do body 
+  async indexBody(req,res){
+      let exercicios = await Exercicio.find(req.body);
+      return res.json(exercicios)
+  },
+
   // Lista com filtro "id"zinho
   async index(req,res)
   {
