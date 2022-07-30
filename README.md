@@ -7,7 +7,7 @@ O projeto está sendo desenvolvido em uma arquiterura cliente-servidor. O lado s
 
 O backend segue um padrão de arquitetura MVC (*Model-View-Controller*), organizando o código em três camadas distintas. Segue a modelagem:
 
-<img src="proj/backend.png" alt="Design do projeto backend" width="700" height="600"/>
+<img src="static/proj/backend.png" alt="Design do projeto backend" width="700" height="600"/>
 
 O frontend ainda está em fase de prototipação.
 
