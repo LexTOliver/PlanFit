@@ -11,7 +11,7 @@ var alunoRoute = require('./routes/alunoRoutes.js');
 
 // Conectando ao mongoDB
 // O próprio Mongo fornece a url abaixo; TODO: configurar DB para  o projeto
-mongoose.connect("mongodb+srv://LexOliver:cNKejpQgHrih1q1n@clustercleiton.h779g.mongodb.net/?retryWrites=true&w=majority", {
+mongoose.connect("mongodb://username:password@host:port/database?options...", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
