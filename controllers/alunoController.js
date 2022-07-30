@@ -6,40 +6,48 @@ module.exports = {
   async show(req, res)
   {
     let alunos = await Aluno.find()
-    .populate('instrutor', 'nome');
+    .populate('instrutor', 'nome -_id');
     return res.json(alunos);
   },
  
-  // Lista com filtro "id"zinho
+  // Aluno pelo "id" (único)
   async index(req,res)
   {
     let alunos = await Aluno.findById(req.params.id)
-    .populate('instrutor', 'nome');
+    .populate('instrutor', 'nome -_id');
     return res.json(alunos);
   },
 
-  // Lista com filtro "nome"
+  // Aluno pelo "nome" (único)
   async indexNome(req,res)
   {
     let alunos_por_nome = await Aluno.find({ nome: req.params.nome} )
-    .populate('instrutor', 'nome');
+    .populate('instrutor', 'nome -_id');
     return res.json(alunos_por_nome);
   },
 
-  // Lista com filtro "email"
+  // Aluno pelo "email"
   async indexEmail(req,res)
   {
     let alunos_por_email = await Aluno.find({ email: req.params.email} )
-    .populate('instrutor', 'nome');;
+    .populate('instrutor', 'nome -_id');;
     return res.json(alunos_por_email);
   },
 
-  // Lista com filtro "nome de usuário"
+  // Aluno pelo "nome de usuário" (único)
   async indexUser(req,res)
   {
     let alunos_por_user = await Aluno.find({ username: req.params.username} )
-    .populate('instrutor', 'nome');
+    .populate('instrutor', 'nome -_id');
     return res.json(alunos_por_user);
+  },
+
+  // Lista alunos pelo ID de um instrutor
+  async indexInstrutor(req,res)
+  {
+    let alunos_por_instrutor = await Aluno.find( { instrutor: req.params.instrutorId })
+    .populate('instrutor', 'nome -_id');
+    return res.json(alunos_por_instrutor);
   },
 
   // Adiciona Aluno

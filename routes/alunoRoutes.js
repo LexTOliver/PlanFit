@@ -8,6 +8,7 @@ router.get('/buscaid/:id', alunoController.index); // Lista um aluno, filtrando 
 router.get('/buscanome/:nome', alunoController.indexNome); // Lista um aluno, filtrando por nome V
 router.get('/buscaemail/:email', alunoController.indexEmail); // Lista um instrutor, filtrando por email V
 router.get('/buscauser/:username', alunoController.indexUser); // Lista um aluno, filtrando por nome de usuário V
+router.get('/buscainstrutor/:instrutorId', alunoController.indexInstrutor); // Lista todos alunos atrelados a um instrutor
 router.post('/', alunoController.store); // Adiciona aluno V
 router.put('/:id', alunoController.update); // Altera aluno V
 router.delete('/:id', alunoController.destroy); // Exclui aluno V

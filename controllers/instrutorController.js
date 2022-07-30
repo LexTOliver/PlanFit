@@ -9,28 +9,28 @@ module.exports = {
     return res.json(instrutores);
   },
  
-  // Lista com filtro "id"zinho
+  // Instrutor pelo "id" (único)
   async index(req,res)
   {
     let instrutores = await Instrutor.findById(req.params.id);
     return res.json(instrutores);
   },
 
-  // Lista com filtro "nome"
+  // Instrutor pelo "nome" (único)
   async indexNome(req,res)
   {
     let instrutores_por_nome = await Instrutor.find({ nome: req.params.nome} );
     return res.json(instrutores_por_nome);
   },
 
-  // Lista com filtro "email"
+  // Instrutor pelo "email"
   async indexEmail(req,res)
   {
     let instrutores_por_email = await Instrutor.find({ email: req.params.email} );
     return res.json(instrutores_por_email);
   },
 
-  // Lista com filtro "nome de usuário"
+  // Instrutor pelo "nome de usuário" (único)
   async indexUser(req,res)
   {
     let instrutores_por_user = await Instrutor.find({ username: req.params.username} );
