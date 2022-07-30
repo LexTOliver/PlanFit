@@ -4,7 +4,7 @@ module.exports = {
   // Lista plano de exercícios
   async show(req, res){
     let planos = await Plano.find()
-    .populate('Instrutor', 'nome -_id')
+    .populate('instrutor', 'nome -_id')
     .populate('lista_exercicio', 'nome execucao descricaoVideo');
 
     return res.json(planos);
@@ -14,7 +14,7 @@ module.exports = {
   async index(req,res)
   {
     let planos = await Plano.findById(req.params.id)
-    .populate('Instrutor', 'nome -_id')
+    .populate('instrutor', 'nome -_id')
     .populate('lista_exercicio', 'nome execucao descricaoVideo');
 
     return res.json(planos);
@@ -24,7 +24,7 @@ module.exports = {
   async indexNome(req,res)
   {
     let planos_por_nome = await Plano.find({ nome: req.params.nome})
-    .populate('Instrutor', 'nome -_id')
+    .populate('instrutor', 'nome -_id')
     .populate('lista_exercicio', 'nome execucao descricaoVideo');
 
     return res.json(planos_por_nome);
