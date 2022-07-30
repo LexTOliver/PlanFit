@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-var gpsMuscular = [
+const gpsMuscular = [
   'Bíceps',
   'Tríceps',
   'Antebraço',
@@ -14,7 +14,7 @@ var gpsMuscular = [
   'Panturrilha'
 ];
 
-const ExercicioScheme = new mongoose.Schema(
+const ExercicioSchema = new mongoose.Schema(
   {
     //id: Number, // Desnecessário, pois o Mongoose gera id automaticamente
     nome: {
@@ -49,4 +49,4 @@ const ExercicioScheme = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model('Exercicio', ExercicioScheme);
+module.exports = mongoose.model('Exercicio', ExercicioSchema);
