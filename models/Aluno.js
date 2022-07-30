@@ -33,10 +33,10 @@ const AlunoSchema = new mongoose.Schema(
         type: String,
         required: [true, 'Senha não especificada'], 
     },
-    instrutor: [{
+    instrutor: {
         type: mongoose.Schema.Types.ObjectId, 
         ref:'Instrutor',
-    }]
+    }
   }
 );
 
