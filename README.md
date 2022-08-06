@@ -37,7 +37,7 @@ O frontend ainda está em fase de prototipação e em desenvolvimento de algumas
 
  - Perfil do instrutor
 
-<img src="static/prototipo_front/profileInstrutor.png" alt="Protótipo - Perfil do instrutor" width="1000" height="720"/>
+<img src="static/prototipo_front/ProfileInstrutor.png" alt="Protótipo - Perfil do instrutor" width="1000" height="720"/>
 
 ## Instalação
 
