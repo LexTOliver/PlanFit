@@ -27,6 +27,18 @@ O frontend ainda está em fase de prototipação e em desenvolvimento de algumas
 
 <img src="static/prototipo_front/EditPlano.png" alt="Protótipo - Edição de plano" width="1000" height="720"/>
 
+ - Cadastro de aluno
+
+<img src="static/prototipo_front/CadastroAluno.png" alt="Protótipo - Cadastro de aluno" width="1000" height="720"/>
+
+ - Edição de aluno
+
+<img src="static/prototipo_front/EditAluno.png" alt="Protótipo - Edição de aluno" width="1000" height="720"/>
+
+ - Perfil do instrutor
+
+<img src="static/prototipo_front/profileInstrutor.png" alt="Protótipo - Perfil do instrutor" width="1000" height="720"/>
+
 ## Instalação
 
 Para executar a aplicação localmente, faça o clone do repositório, altere a URL de conexão ao mongoDB e execute os comandos no console:
