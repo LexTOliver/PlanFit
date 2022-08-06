@@ -1,4 +1,5 @@
 const Registro = require('../models/Registro.js');
+const mongoose = require('mongoose');
 
 module.exports = {
   // Lista registro de atividades
@@ -20,10 +21,10 @@ module.exports = {
     return res.json(registros);
   },
 
-  // Lista pelo nome
-  async indexNome(req,res)
+  // Lista exercícios de um aluno
+  async indexAluno(req,res)
   {
-    let registros_por_nome = await Registro.find({ aluno: {nome: req.params.nome}})
+    let registros_por_nome = await Registro.find({ aluno: {_id: mongoose.Types.ObjectId(req.params.id)}})
     .populate('aluno', 'nome -_id')
     .populate('data');
 

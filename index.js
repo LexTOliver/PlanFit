@@ -8,6 +8,7 @@ var exercicioRoute = require('./routes/exercicioRoutes.js');
 var planoRoute = require('./routes/planoRoutes.js');
 var instrutorRoute = require('./routes/instrutorRoutes.js');
 var alunoRoute = require('./routes/alunoRoutes.js');
+var registroRoute = require('./routes/registroRoutes.js');
 
 // Conectando ao mongoDB
 // O próprio Mongo fornece a url abaixo; TODO: configurar DB para  o projeto
@@ -32,5 +33,6 @@ app.use('/exercicio', exercicioRoute);
 app.use('/plano', planoRoute);
 app.use('/instrutor', instrutorRoute);
 app.use('/aluno', alunoRoute);
+app.use('/registro', registroRoute);
 
 app.listen(3000, () => console.log('PlanFit API started on port 3000!'));
