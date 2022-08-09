@@ -7,7 +7,7 @@ const RegistroSchema = new mongoose.Schema(
       required: true,
     },
     realizado: {
-      type: Boolean
+      type: Boolean,
       default: false
     },
     aluno: {
