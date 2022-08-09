@@ -8,6 +8,7 @@ const RegistroSchema = new mongoose.Schema(
     },
     realizado: {
       type: Boolean
+      default: false
     },
     aluno: {
       type: mongoose.Schema.Types.ObjectId,
