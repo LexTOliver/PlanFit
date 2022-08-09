@@ -7,9 +7,37 @@ O projeto está sendo desenvolvido em uma arquiterura cliente-servidor. O lado s
 
 O backend segue um padrão de arquitetura MVC (*Model-View-Controller*), organizando o código em três camadas distintas. Segue a modelagem:
 
-<img src="static/proj/backend.png" alt="Design do projeto backend" width="700" height="600"/>
+<img src="static/proj/backend.png" alt="Design do projeto backend" width="800" height="1350"/>
 
-O frontend ainda está em fase de prototipação.
+O frontend ainda está em fase de prototipação e em desenvolvimento de algumas páginas. Dentre as telas disponíveis, segue abaixo os designs feitos até então:
+
+ - Cadastro de exercício
+
+<img src="static/prototipo_front/CadastroExerc.png" alt="Protótipo - Cadastro de exercício" width="1000" height="720"/>
+
+ - Edição de exercício
+
+<img src="static/prototipo_front/EditExerc.png" alt="Protótipo - Edição de exercício" width="1000" height="720"/>
+
+ - Cadastro de plano
+
+<img src="static/prototipo_front/CadastroPlano.png" alt="Protótipo - Cadastro de plano" width="1000" height="720"/>
+
+ - Edição de plano
+
+<img src="static/prototipo_front/EditPlano.png" alt="Protótipo - Edição de plano" width="1000" height="720"/>
+
+ - Cadastro de aluno
+
+<img src="static/prototipo_front/CadastroAluno.png" alt="Protótipo - Cadastro de aluno" width="1000" height="720"/>
+
+ - Edição de aluno
+
+<img src="static/prototipo_front/EditAluno.png" alt="Protótipo - Edição de aluno" width="1000" height="720"/>
+
+ - Perfil do instrutor
+
+<img src="static/prototipo_front/ProfileInstrutor.png" alt="Protótipo - Perfil do instrutor" width="1000" height="720"/>
 
 ## Instalação
 
