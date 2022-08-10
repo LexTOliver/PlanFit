@@ -9,7 +9,10 @@ O backend segue um padrão de arquitetura MVC (*Model-View-Controller*), organiz
 
 <img src="static/proj/backend.png" alt="Design do projeto backend" width="800" height="1350"/>
 
-O frontend ainda está em fase de prototipação e em desenvolvimento de algumas páginas. Dentre as telas disponíveis, segue abaixo os designs feitos até então:
+O frontend ainda está em fase de prototipação e em desenvolvimento de algumas páginas.
+
+O link para o FrontEnd: <a href="https://github.com/D-Waack/DWM_Front">PlanFit FronEnd</a>
+Dentre as telas disponíveis, segue abaixo os designs feitos até então:
 
  - Cadastro de exercício
 
@@ -60,6 +63,11 @@ npm start
 
 
  - Frontend
+
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="60" height="60" /> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" width="60" height="60" />
+          
+          
 
 ### License
 [MIT](https://choosealicense.com/licenses/mit/)
