@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-// const cors = require('cors');
+const cors = require('cors');
 
 // Rotas
 var exercicioRoute = require('./routes/exercicioRoutes.js');
@@ -19,6 +19,7 @@ mongoose.connect("mongodb://username:password@host:port/database?options...", {
 
 // Iniciando API Express e configurações
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
