@@ -6,6 +6,7 @@ module.exports = {
   async show(req, res){
     let registros = await Registro.find()
     .populate('aluno', 'nome -_id')
+    .populate('plano', 'nome -_id')
     .populate('data');
 
     return res.json(registros);
@@ -16,6 +17,7 @@ module.exports = {
   {
     let registros = await Registro.findById(req.params.id)
     .populate('aluno', 'nome -_id')
+    .populate('plano', 'nome -_id')
     .populate('data');
 
     return res.json(registros);
@@ -26,6 +28,7 @@ module.exports = {
   {
     let registros_por_nome = await Registro.find({ aluno: {_id: mongoose.Types.ObjectId(req.params.id)}})
     .populate('aluno', 'nome -_id')
+    .populate('plano', 'nome -_id')
     .populate('data');
 
     return res.json(registros_por_nome);
