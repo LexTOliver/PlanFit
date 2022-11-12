@@ -1,46 +1,15 @@
 # PlanFit
-Aplicação de Desenvolvimento Web Moderno (DWM) para auxiliar instrutores ou personais a fazerem a gestão de programas de treinos e seus alunos.
+Aplicação de Desenvolvimento Web Moderno com modelagem em PWA (Progressive Web App) para auxiliar instrutores ou personais a fazerem a gestão de programas de treinos e seus alunos.
 
 ## Projeto
 
-O projeto está sendo desenvolvido em uma arquiterura cliente-servidor. O lado servidor é uma API RESTful que fornece os dados e define as regras de negócio da aplicação, enquanto o lado cliente é uma página de acesso e visualização que consome os dados do lado servidor.
+O projeto está sendo desenvolvido em uma arquiterura cliente-servidor. O lado servidor é uma API RESTful que fornece os dados e define as regras de negócio da aplicação, enquanto o lado cliente é uma página de acesso, visualização e gestão que consome os dados do lado servidor.
 
-O backend segue um padrão de arquitetura MVC (*Model-View-Controller*), organizando o código em três camadas distintas. Segue a modelagem:
+O backend segue um padrão de arquitetura MVC (*Model-View-Controller*), organizando o código em três camadas distintas, conforme a modelagem:
 
 <img src="static/proj/backend.png" alt="Design do projeto backend" width="800" height="1350"/>
 
-O frontend ainda está em fase de prototipação e em desenvolvimento de algumas páginas.
-
-O link para o FrontEnd: <a href="https://github.com/D-Waack/DWM_Front">PlanFit FronEnd</a>
-Dentre as telas disponíveis, segue abaixo os designs feitos até então:
-
- - Cadastro de exercício
-
-<img src="static/prototipo_front/CadastroExerc.png" alt="Protótipo - Cadastro de exercício" width="1000" height="720"/>
-
- - Edição de exercício
-
-<img src="static/prototipo_front/EditExerc.png" alt="Protótipo - Edição de exercício" width="1000" height="720"/>
-
- - Cadastro de plano
-
-<img src="static/prototipo_front/CadastroPlano.png" alt="Protótipo - Cadastro de plano" width="1000" height="720"/>
-
- - Edição de plano
-
-<img src="static/prototipo_front/EditPlano.png" alt="Protótipo - Edição de plano" width="1000" height="720"/>
-
- - Cadastro de aluno
-
-<img src="static/prototipo_front/CadastroAluno.png" alt="Protótipo - Cadastro de aluno" width="1000" height="720"/>
-
- - Edição de aluno
-
-<img src="static/prototipo_front/EditAluno.png" alt="Protótipo - Edição de aluno" width="1000" height="720"/>
-
- - Perfil do instrutor
-
-<img src="static/prototipo_front/ProfileInstrutor.png" alt="Protótipo - Perfil do instrutor" width="1000" height="720"/>
+O frontend ainda está em fase de prototipação e implementação das páginas. O <a href="https://www.figma.com/file/QBynbF9dgwItNtHD1bUL0e/PlanFit-Front?node-id=0%3A1&t=zYEVZ6ftXxkDG7KV-1">protótipo</a> está sendo feito no Figma.
 
 ## Instalação
 
