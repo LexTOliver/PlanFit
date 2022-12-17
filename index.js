@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
+require('dotenv').config()
 
 // Rotas
 var exercicioRoute = require('./routes/exercicioRoutes.js');
@@ -12,7 +13,7 @@ var registroRoute = require('./routes/registroRoutes.js');
 
 // Conectando ao mongoDB
 // O próprio Mongo fornece a url abaixo; TODO: configurar DB para  o projeto
-mongoose.connect("mongodb://username:password@host:port/database?options...", {
+mongoose.connect(process.env.dbURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
