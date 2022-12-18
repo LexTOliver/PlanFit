@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { View, Image, Text, StyleSheet, Pressable, Keyboard } from "react-native";
-import MyButton from "../../components/MyButton";
 import { StatusBar } from "expo-status-bar";
+import MyButton from "../../components/MyButton";
 import MyInputText from "../../components/MyInputText";
 
 const PlanFitLogo = require('../../../assets/Logo.png');
 
-export default function LoginScreen(){
+const LoginScreen = (props) => {
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
-
+  
   return (
     <View style={styles.container}>
       <StatusBar style="auto" backgroundColor='#D10A16' />
@@ -33,15 +33,23 @@ export default function LoginScreen(){
             secureTextEntry={true}
           />
           <Pressable><Text>Esqueci minha senha</Text></Pressable>
-          <MyButton value="ENTRAR" style={{marginTop: 24, marginBottom: 8}}/>
-          <MyButton value="PRIMEIRO ACESSO" style={{marginBottom: 8}}/>
+          <MyButton
+           value="ENTRAR"
+           style={{marginTop: 24, marginBottom: 8}}
+           onPress={() => props.navigation.navigate('Logged')}
+          />
+          <MyButton
+           value="PRIMEIRO ACESSO"
+           onPress={() => props.navigation.navigate('FirstAccess')}
+           style={{marginBottom: 8}}
+          />
           <MyButton value="ACESSAR COM GOOGLE" style={{marginBottom: 8}}/>
           <MyButton value="ACESSAR COM IFB" style={{marginBottom: 8}}/>
         </View>
       </Pressable>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -93,3 +101,5 @@ const styles = StyleSheet.create({
     fontSize: 20
   },
 });
+
+export default LoginScreen;

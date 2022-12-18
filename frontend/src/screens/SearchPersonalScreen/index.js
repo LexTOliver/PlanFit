@@ -1,13 +1,14 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import { StatusBar } from 'expo-status-bar';
+import { StatusBar } from "expo-status-bar";
+
 import MyButton from "../../components/MyButton";
 
-const FirstAccessScreen = (props) => {
+const SearchPersonalScreen = (props) => {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" backgroundColor='#D10A16' />
-      <Text>TODO: Implementar tela de primeiro acesso</Text>
+      <Text>TODO: Implementar tela de busca de personais</Text>
       <MyButton
        value="Retornar"
        onPress={() => props.navigation.navigate('Login')}
@@ -26,4 +27,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default FirstAccessScreen;
+export default SearchPersonalScreen;
