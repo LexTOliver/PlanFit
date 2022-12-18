@@ -7,7 +7,7 @@ O projeto está sendo desenvolvido em uma arquiterura cliente-servidor. O lado s
 
 O backend segue um padrão de arquitetura MVC (*Model-View-Controller*), organizando o código em três camadas distintas, conforme a modelagem:
 
-<img src="static/proj/backend.png" alt="Design do projeto backend" width="800" height="1350"/>
+<img src="backend/static/proj/backend.png" alt="Design do projeto backend" width="600" height="1000"/>
 
 O frontend ainda está em fase de prototipação e implementação das páginas. O <a href="https://www.figma.com/file/QBynbF9dgwItNtHD1bUL0e/PlanFit-Front?node-id=0%3A1&t=zYEVZ6ftXxkDG7KV-1">protótipo</a> está sendo feito no Figma.
 
