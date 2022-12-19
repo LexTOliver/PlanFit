@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config()
 
+mongoose.set("strictQuery", true); //proxima versão defaulta pra false, isso elimina o warning, pesquisar o que faz later
+
 // Rotas
 var exercicioRoute = require('./routes/exercicioRoutes.js');
 var planoRoute = require('./routes/planoRoutes.js');
