@@ -10,7 +10,7 @@ const PlanoSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Instrutor'
     },
-    lista_exercicio: {
+    listaExercicio: {
       type: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Exercicio',
