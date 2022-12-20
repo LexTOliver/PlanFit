@@ -13,12 +13,12 @@ const RegistroSchema = new mongoose.Schema(
     aluno: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Aluno',
-      required: true,
+      required: [true, 'Aluno para registro deve ser especificado'],
     },
     plano: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'PlanoExercicio',
-      required: true,
+      required: [true, 'Plano para registro deve ser especificado'],
     }
   }
 )
