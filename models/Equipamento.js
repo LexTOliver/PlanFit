@@ -10,6 +10,7 @@ const EquipamentoSchema = new mongoose.Schema(
     },
     descricao: {
       type: String,
+      default:"Sem descrição.",
     },
     image: {
       type: Buffer
