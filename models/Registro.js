@@ -8,15 +8,17 @@ const RegistroSchema = new mongoose.Schema(
     },
     realizado: {
       type: Boolean,
-      default: false
+      default: false,
     },
     aluno: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Aluno',
+      required: true,
     },
     plano: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'PlanoExercicio',
+      required: true,
     }
   }
 )
