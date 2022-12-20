@@ -13,7 +13,7 @@ const InstrutorSchema = new mongoose.Schema(
     nome: {
       type: String,
       required: [true, 'Nome do instrutor não especificado'],
-      maxLength: 40
+      maxLength: [40, 'Nome "{VALUE}" excedeu o limite de 40 caracteres.'],
     },
     email: {
       type: String,
