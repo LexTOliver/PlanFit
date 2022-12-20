@@ -19,22 +19,22 @@ module.exports = {
   // Lista com filtro "nome"
   async indexNome(req,res)
   {
-    let exercicios_por_nome = await Exercicio.find({ nome: req.params.nome} );
-    return res.json(exercicios_por_nome);
+    let exerciciosPorNome = await Exercicio.find({ nome: req.params.nome} );
+    return res.json(exerciciosPorNome);
   },
 
   // Lista com filtro "equipamento"
   async indexEquipamento(req,res)
   {
-    let exercicios_por_equipamento = await Exercicio.find({ equipamento: req.params.equipamento} );
-    return res.json(exercicios_por_equipamento);
+    let exerciciosPorEquipamento = await Exercicio.find({ equipamento: req.params.equipamento} );
+    return res.json(exerciciosPorEquipamento);
   },
   
   // Lista com filtro "grupo muscular"
   async indexGrupoMuscular(req,res)
   {
-    let exercicios_por_grupo = await Exercicio.find({ grupoMuscular: req.params.grupo} );
-    return res.json(exercicios_por_grupo);
+    let exerciciosPorGrupo = await Exercicio.find({ grupoMuscular: req.params.grupo} );
+    return res.json(exerciciosPorGrupo);
   },
 
   // Adiciona exercício

@@ -19,22 +19,22 @@ module.exports = {
   // Instrutor pelo "nome" (único)
   async indexNome(req,res)
   {
-    let instrutores_por_nome = await Instrutor.find({ nome: req.params.nome} );
-    return res.json(instrutores_por_nome);
+    let instrutoresPorNome = await Instrutor.find({ nome: req.params.nome} );
+    return res.json(instrutoresPorNome);
   },
 
   // Instrutor pelo "email"
   async indexEmail(req,res)
   {
-    let instrutores_por_email = await Instrutor.find({ email: req.params.email} );
-    return res.json(instrutores_por_email);
+    let instrutoresPorEmail = await Instrutor.find({ email: req.params.email} );
+    return res.json(instrutoresPorEmail);
   },
 
   // Instrutor pelo "nome de usuário" (único)
   async indexUser(req,res)
   {
-    let instrutores_por_user = await Instrutor.find({ username: req.params.username} );
-    return res.json(instrutores_por_user);
+    let instrutoresPorUser = await Instrutor.find({ username: req.params.username} );
+    return res.json(instrutoresPorUser);
   },
 
   // Adiciona instrutor

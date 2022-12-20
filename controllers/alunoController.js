@@ -21,33 +21,33 @@ module.exports = {
   // Aluno pelo "nome" (único)
   async indexNome(req,res)
   {
-    let alunos_por_nome = await Aluno.find({ nome: req.params.nome} )
+    let alunosPorNome = await Aluno.find({ nome: req.params.nome} )
     .populate('instrutor', 'nome -_id');
-    return res.json(alunos_por_nome);
+    return res.json(alunosPorNome);
   },
 
   // Aluno pelo "email"
   async indexEmail(req,res)
   {
-    let alunos_por_email = await Aluno.find({ email: req.params.email} )
+    let alunosPorEmail = await Aluno.find({ email: req.params.email} )
     .populate('instrutor', 'nome -_id');;
-    return res.json(alunos_por_email);
+    return res.json(alunosPorEmail);
   },
 
   // Aluno pelo "nome de usuário" (único)
   async indexUser(req,res)
   {
-    let alunos_por_user = await Aluno.find({ username: req.params.username} )
+    let alunosPorUser = await Aluno.find({ username: req.params.username} )
     .populate('instrutor', 'nome -_id');
-    return res.json(alunos_por_user);
+    return res.json(alunosPorUser);
   },
 
   // Lista alunos pelo ID de um instrutor
   async indexInstrutor(req,res)
   {
-    let alunos_por_instrutor = await Aluno.find( { instrutor: req.params.instrutorId })
+    let alunosPorInstrutor = await Aluno.find( { instrutor: req.params.instrutorId })
     .populate('instrutor', 'nome -_id');
-    return res.json(alunos_por_instrutor);
+    return res.json(alunosPorInstrutor);
   },
 
   // Adiciona Aluno
