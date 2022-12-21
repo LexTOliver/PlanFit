@@ -36,6 +36,9 @@ const AlunoSchema = new mongoose.Schema(
     instrutor: {
         type: mongoose.Schema.Types.ObjectId, 
         ref:'Instrutor',
+    },
+    imagem: {
+      type: Buffer
     }
   }
 );

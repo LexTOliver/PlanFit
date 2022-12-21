@@ -45,6 +45,9 @@ const ExercicioSchema = new mongoose.Schema(
     descricaoVideo: {
       type: String,
       default: "Sem vídeo-exemplo"
+    },
+    imagem: {
+      type: Buffer
     }
   }
 );

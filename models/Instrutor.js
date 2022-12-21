@@ -30,6 +30,9 @@ const InstrutorSchema = new mongoose.Schema(
     senha: { 
         type: String,
         required: [true, 'Senha não especificada'], 
+    },
+    imagem: {
+      type: Buffer
     }
   }
 );
