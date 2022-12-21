@@ -1,6 +1,9 @@
 var express = require('express');
 const alunoController = require('../controllers/alunoController');
 
+var multer = require('multer');
+var upload = multer({storage: multer.memoryStorage()});
+
 var router = express.Router();
 
 router.get('/', alunoController.show); // Lista alunos  
@@ -9,7 +12,7 @@ router.get('/buscanome/:nome', alunoController.indexNome); // Lista um aluno, fi
 router.get('/buscaemail/:email', alunoController.indexEmail); // Lista um instrutor, filtrando por email V
 router.get('/buscauser/:username', alunoController.indexUser); // Lista um aluno, filtrando por nome de usuário V
 router.get('/buscainstrutor/:instrutorId', alunoController.indexInstrutor); // Lista todos alunos atrelados a um instrutor
-router.post('/', alunoController.store); // Adiciona aluno V
+router.post('/', upload.single('imagem'), alunoController.store); // Adiciona aluno V
 router.put('/:id', alunoController.update); // Altera aluno V
 router.delete('/:id', alunoController.destroy); // Exclui aluno V
 
