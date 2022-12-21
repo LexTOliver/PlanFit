@@ -26,6 +26,7 @@ module.exports = {
   // Adiciona equipamento
   async store(req, res)
   {
+    req.body.imagem = req.file.buffer;
     const equipamento =  await Equipamento.create(req.body);
     return res.json(equipamento);
   },

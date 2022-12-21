@@ -40,6 +40,7 @@ module.exports = {
   // Adiciona instrutor
   async store(req, res)
   {
+    req.body.imagem = req.file.buffer;
     const instrutor =  await Instrutor.create(req.body);
     return res.json(instrutor);
   },

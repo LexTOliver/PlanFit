@@ -53,6 +53,7 @@ module.exports = {
   // Adiciona Aluno
   async store(req, res)
   {
+    req.body.imagem = req.file.buffer;
     const aluno =  await Aluno.create(req.body);
     return res.json(aluno);
   },
