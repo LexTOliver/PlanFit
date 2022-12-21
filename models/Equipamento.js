@@ -12,7 +12,7 @@ const EquipamentoSchema = new mongoose.Schema(
       type: String,
       default:"Sem descrição.",
     },
-    image: {
+    imagem: {
       type: Buffer
     }
   }
