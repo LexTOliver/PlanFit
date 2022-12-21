@@ -40,7 +40,9 @@ module.exports = {
   // Adiciona exercício
   async store(req, res)
   {
-    req.body.imagem = req.file.buffer;
+    if (req.file) {
+      req.body.imagem = req.file.buffer;
+    }
     const exercicio =  await Exercicio.create(req.body);
     return res.json(exercicio);
   },
