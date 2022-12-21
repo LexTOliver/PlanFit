@@ -54,21 +54,18 @@ const LoginScreen = (props) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    // justifyContent: 'center's,
+    // justifyContent: 'center',
     backgroundColor: '#F3EAE9',
   },
   header: {
+    flex: 0.1,
     flexDirection: 'row',
-    width: '100%',
-    height: 100,
     alignItems: 'flex-end',
     justifyContent: 'center',
     paddingBottom: 18,
     backgroundColor: '#FFF',
     borderBottomColor: '#970000',
     borderBottomWidth: 0.5,
-    // marginBottom
   },
   logo: {
     width: 30,
@@ -81,16 +78,20 @@ const styles = StyleSheet.create({
     fontSize: 30,
   },
   cardContainer: {
-    flex: 1,
+    flex: 0.9,
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 16
   },
   card: {
-    width: 360,
-    height: 480,
+    width: '95%',
+    height: '60%',
+    minWidth: 360,
+    minHeight: 480,
+    maxWidth: 600,
+    maxHeight: 800,
     alignItems: 'center',
-    // justifyContent: 'center',
+    justifyContent: 'center',
     backgroundColor: '#FFF',
     borderRadius: 16,
     paddingHorizontal: 24,

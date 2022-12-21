@@ -9,6 +9,7 @@ export default function MyInputText(props) {
           onChangeText={props.setInputValue}
           value={props.inputValue}
           placeholder={props.placeholder}
+          placeholderTextColor={'rgba(57, 74, 128, 0.5)'}
           keyboardType={props.keyboardType}
           secureTextEntry={props.secureTextEntry}
         />
@@ -30,7 +31,7 @@ const styles = StyleSheet.create({
   inputField: {
     borderRadius: 12,
     borderWidth: 0.5,
-    borderColor: 'rgba(57, 74, 128, 0.75)',
+    borderColor: 'rgba(57, 74, 128, 0.8)',
     padding: 10,
     fontSize: 16
   },
