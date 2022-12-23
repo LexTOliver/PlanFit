@@ -19,27 +19,30 @@ module.exports = {
   // Instrutor pelo "nome" (único)
   async indexNome(req,res)
   {
-    let instrutores_por_nome = await Instrutor.find({ nome: req.params.nome} );
-    return res.json(instrutores_por_nome);
+    let instrutoresPorNome = await Instrutor.find({ nome: req.params.nome} );
+    return res.json(instrutoresPorNome);
   },
 
   // Instrutor pelo "email"
   async indexEmail(req,res)
   {
-    let instrutores_por_email = await Instrutor.find({ email: req.params.email} );
-    return res.json(instrutores_por_email);
+    let instrutoresPorEmail = await Instrutor.find({ email: req.params.email} );
+    return res.json(instrutoresPorEmail);
   },
 
   // Instrutor pelo "nome de usuário" (único)
   async indexUser(req,res)
   {
-    let instrutores_por_user = await Instrutor.find({ username: req.params.username} );
-    return res.json(instrutores_por_user);
+    let instrutoresPorUser = await Instrutor.find({ username: req.params.username} );
+    return res.json(instrutoresPorUser);
   },
 
   // Adiciona instrutor
   async store(req, res)
   {
+    if (req.file) {
+      req.body.imagem = req.file.buffer;
+    }
     const instrutor =  await Instrutor.create(req.body);
     return res.json(instrutor);
   },
@@ -48,6 +51,9 @@ module.exports = {
   // Deve-se passar dois dados: o id via param e o json via body
   async update(req,res)
   {
+    if (req.file) {
+      req.body.imagem = req.file.buffer;
+    }
     let instrutor = await Instrutor.findByIdAndUpdate(req.params.id,req.body,{new:true}); 
     return res.json(instrutor);
   },

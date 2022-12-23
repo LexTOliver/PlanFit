@@ -5,7 +5,7 @@ module.exports = {
   async show(req, res){
     let planos = await Plano.find()
     .populate('instrutor', 'nome -_id')
-    .populate('lista_exercicio', 'nome execucao descricaoVideo');
+    .populate('listaExercicio', 'nome execucao descricaoVideo');
 
     return res.json(planos);
   },
@@ -15,7 +15,7 @@ module.exports = {
   {
     let planos = await Plano.findById(req.params.id)
     .populate('instrutor', 'nome -_id')
-    .populate('lista_exercicio', 'nome execucao descricaoVideo');
+    .populate('listaExercicio', 'nome execucao descricaoVideo');
 
     return res.json(planos);
   },
@@ -23,11 +23,11 @@ module.exports = {
   // Lista com filtro "nome"
   async indexNome(req,res)
   {
-    let planos_por_nome = await Plano.find({ nome: req.params.nome})
+    let planosPorNome = await Plano.find({ nome: req.params.nome})
     .populate('instrutor', 'nome -_id')
-    .populate('lista_exercicio', 'nome execucao descricaoVideo');
+    .populate('listaExercicio', 'nome execucao descricaoVideo');
 
-    return res.json(planos_por_nome);
+    return res.json(planosPorNome);
   },
 
   // Adiciona plano de exercícios

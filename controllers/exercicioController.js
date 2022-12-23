@@ -19,27 +19,30 @@ module.exports = {
   // Lista com filtro "nome"
   async indexNome(req,res)
   {
-    let exercicios_por_nome = await Exercicio.find({ nome: req.params.nome} );
-    return res.json(exercicios_por_nome);
+    let exerciciosPorNome = await Exercicio.find({ nome: req.params.nome} );
+    return res.json(exerciciosPorNome);
   },
 
   // Lista com filtro "equipamento"
   async indexEquipamento(req,res)
   {
-    let exercicios_por_equipamento = await Exercicio.find({ equipamento: req.params.equipamento} );
-    return res.json(exercicios_por_equipamento);
+    let exerciciosPorEquipamento = await Exercicio.find({ equipamento: req.params.equipamento} );
+    return res.json(exerciciosPorEquipamento);
   },
   
   // Lista com filtro "grupo muscular"
   async indexGrupoMuscular(req,res)
   {
-    let exercicios_por_grupo = await Exercicio.find({ grupoMuscular: req.params.grupo} );
-    return res.json(exercicios_por_grupo);
+    let exerciciosPorGrupo = await Exercicio.find({ grupoMuscular: req.params.grupo} );
+    return res.json(exerciciosPorGrupo);
   },
 
   // Adiciona exercício
   async store(req, res)
   {
+    if (req.file) {
+      req.body.imagem = req.file.buffer;
+    }
     const exercicio =  await Exercicio.create(req.body);
     return res.json(exercicio);
   },
@@ -48,6 +51,9 @@ module.exports = {
   // Deve-se passar dois dados: o id via param e o json via body
   async update(req,res)
   {
+    if (req.file) {
+      req.body.imagem = req.file.buffer;
+    }
     let exercicio = await Exercicio.findByIdAndUpdate(req.params.id,req.body,{new:true}); 
     return res.json(exercicio);
   },

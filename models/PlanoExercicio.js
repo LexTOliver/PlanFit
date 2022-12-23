@@ -10,11 +10,13 @@ const PlanoSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Instrutor'
     },
-    lista_exercicio: {
+    listaExercicio: {
       type: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Exercicio',
-      }]
+      }],
+      required: true,
+      validate: [(value) => value.length > 0, 'Lista deve ter ao menos um exercício']
     },
     descricao: {
       type: String,

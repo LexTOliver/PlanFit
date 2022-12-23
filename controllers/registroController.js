@@ -26,12 +26,12 @@ module.exports = {
   // Lista exercícios de um aluno
   async indexAluno(req,res)
   {
-    let registros_por_nome = await Registro.find({ aluno: {_id: mongoose.Types.ObjectId(req.params.id)}})
+    let registrosPorNome = await Registro.find({ aluno: {_id: mongoose.Types.ObjectId(req.params.id)}})
     .populate('aluno', 'nome -_id')
     .populate('plano', 'nome -_id')
     .populate('data');
 
-    return res.json(registros_por_nome);
+    return res.json(registrosPorNome);
   },
 
   // Adiciona registro de atividade
