@@ -12,7 +12,7 @@ router.get('/buscanome/:nome', instrutorController.indexNome); // Lista um instr
 router.get('/buscaemail/:email', instrutorController.indexEmail); // Lista um instrutor, filtrando por email V
 router.get('/buscauser/:username', instrutorController.indexUser); // Lista um instrutor, filtrando por nome de usuário V
 router.post('/', upload.single('imagem'), instrutorController.store); // Adiciona instrutor V
-router.put('/:id', instrutorController.update); // Altera instrutor V
+router.put('/:id', upload.single('imagem'), instrutorController.update); // Altera instrutor V
 router.delete('/:id', instrutorController.destroy); // Exclui instrutor V
 
 module.exports = router;

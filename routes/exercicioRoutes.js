@@ -12,7 +12,7 @@ router.get('/buscanome/:nome', exercicioController.indexNome); // Lista exercíc
 router.get('/buscaequipamento/:equipamento', exercicioController.indexEquipamento); // Lista exercício, filtrando por equipamento
 router.get('/buscagrupo/:grupo', exercicioController.indexGrupoMuscular); // Lista exercicio, filtrando por grupo muscular
 router.post('/', upload.single('imagem'), exercicioController.store); // Adiciona exercício
-router.put('/:id', exercicioController.update); // Altera exercício
+router.put('/:id', upload.single('imagem'), exercicioController.update); // Altera exercício
 router.delete('/:id', exercicioController.destroy); // Exclui exercício
 
 module.exports = router;
