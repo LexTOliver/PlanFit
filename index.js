@@ -41,4 +41,5 @@ app.use('/aluno', alunoRoute);
 app.use('/registro', registroRoute);
 app.use('/equipamento', equipamentoRoute);
 
-app.listen(3030, () => console.log('PlanFit API started on port 3030!'));
+const PORT = process.env.PORT || 3030;
+app.listen(PORT, () => console.log(`PlanFit API started!`));
