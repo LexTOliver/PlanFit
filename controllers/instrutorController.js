@@ -51,6 +51,9 @@ module.exports = {
   // Deve-se passar dois dados: o id via param e o json via body
   async update(req,res)
   {
+    if (req.file) {
+      req.body.imagem = req.file.buffer;
+    }
     let instrutor = await Instrutor.findByIdAndUpdate(req.params.id,req.body,{new:true}); 
     return res.json(instrutor);
   },

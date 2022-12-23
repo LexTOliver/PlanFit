@@ -63,6 +63,9 @@ module.exports = {
   // Altera aluno
   async update(req,res)
   {
+    if (req.file) {
+      req.body.imagem = req.file.buffer;
+    }
     let aluno = await Aluno.findByIdAndUpdate(req.params.id,req.body,{new:true}); 
     return res.json(aluno);
   },
